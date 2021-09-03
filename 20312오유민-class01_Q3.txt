@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Exercise1_3 {
+	static int firstnumber, secondnumber;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("첫 번째 숫자를 입력하세요 : ");
+		firstnumber = sc.nextInt();
+		System.out.print("두 번째 숫자를 입력하세요 : ");
+		secondnumber = sc.nextInt();
+		arithmetic();
+	}
+	public  static void arithmetic() {
+		System.out.println("덧셈결과 => "+(firstnumber+secondnumber));
+		System.out.println("뺄셈결과 => "+(firstnumber-secondnumber));
+		System.out.println("뺄셈결과 => "+(firstnumber*secondnumber));
+		System.out.println("뺄셈결과 => "+(firstnumber/secondnumber));
+		System.out.println("뺄셈결과 => "+(firstnumber%secondnumber));
+	}
+
+}

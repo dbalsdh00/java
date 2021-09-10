@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class MonthSchedule {
+	public static int num1, num2;
+	public static String str, day[];
+
+	public static void todo() {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		if (num1 == 1) {
+			System.out.print("할일(빈칸없이입력)?");
+			str = sc.next();
+			System.out.println();
+		}
+	}
+
+	public static void todob() {
+		// TODO Auto-generated method stub
+		if (num1 == 2) {
+			if (day[num2] == null) {
+				System.out.println(num2 + "일의 할 일은 없습니다.");
+			} else {
+				System.out.println(num2 + "일의 할 일은 " + day[num2] + "입니다\n");
+			}
+		}
+
+	}
+
+	public static void todoa() {
+		if (num1 == 1) {
+			day[num2] = str;
+		}
+	}
+
+	public static void date() {
+		// TODO Auto-generated method stub+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("날짜(1~30)?");
+		num2 = sc.nextInt();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		day = new String[30];
+
+		while (true) {
+			System.out.println("===이번달 스케쥴 관리 프로그램===");
+			System.out.print("할일(1:입력, 2:보기 , 3:끝내기) >>");
+			num1 = sc.nextInt();
+			if (num1 == 3) {
+				break;
+			}
+			switch (num1) {
+			case 1:
+				date();
+				todo();
+				todoa();
+				break;
+			case 2:
+				date();
+				todob();
+				break;
+			case 3:
+				break;
+			}
+		}
+	}
+
+}

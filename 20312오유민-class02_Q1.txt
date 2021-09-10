@@ -1,0 +1,23 @@
+
+public class song {
+	public static int year;
+	public static String artist, title;
+	
+	// 매개변수로 모든 필드를 초기화 하는 생성자
+	song(int year, String artist, String title){
+		this.year = year;
+		this.artist = artist;
+		this.title = title;
+	}
+	// 노래 정보를 출력하는 show 메소드
+	public static void show() {
+		// TODO Auto-generated method stub
+		System.out.println(year+"년 "+artist+"가 부른 "+title);
+	}
+	public static void main(String[] args) {
+		// artist 객체 생성
+		song artist = new song(2021, "BTS", "Butter");
+		// 생성된 객체의 show 메소드 출력
+		artist.show();
+	}
+}
